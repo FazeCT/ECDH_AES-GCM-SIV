@@ -1,4 +1,7 @@
 from Crypto.Util.number import getPrime, bytes_to_long, long_to_bytes
+from Crypto.Cipher import AES
+from Crypto.Util import Counter
+import os 
 import secrets 
 
 class EllipticCurve:
@@ -119,11 +122,6 @@ class Field(object):
             m2 >>= 1
             i -= 1
         return a
-    
-from Crypto.Cipher import AES
-from Crypto.Util.number import bytes_to_long, long_to_bytes
-from Crypto.Util import Counter
-import os 
 
 class AESCipher():
     """
